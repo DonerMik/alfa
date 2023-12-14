@@ -17,15 +17,15 @@ git clone https://github.com/account_name/alfa/
 
 - Cоздать и активировать виртуальное окружение:
 
-python3 -m venv env
+  python3 -m venv env
 
-source env/bin/activate
+  source env/bin/activate
 
-4)Установить зависимости из файла requirements.txt:
+- Установить зависимости из файла requirements.txt:
 
-python3 -m pip install --upgrade pip
+  python3 -m pip install --upgrade pip
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 Переданный файл .env сохраните в корне папки alfa
 
