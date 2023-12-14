@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - ./mongo-data:/data/db
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 1122
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8091:8090"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: "mongodb://root:1122@mongo:27017"
